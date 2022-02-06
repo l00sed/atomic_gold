@@ -1,0 +1,7 @@
+environment.yml
+db.sqlite3
+__pycache__/
+**/__pycache__/
+**/migrations/
+node_modules/
+**/node_modules
