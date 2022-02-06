@@ -1,7 +1,7 @@
 import React from "react"
 import { BackSide } from "three"
 
-export default () => {
+export default ( { color=0xa0a0a0 } ) => {
   return (
     <mesh>
       <sphereBufferGeometry
@@ -9,7 +9,7 @@ export default () => {
         attach="geometry"
       />
       <meshStandardMaterial
-        color={ 0xf85c37 }
+        color={ color }
         attach="material"
         side={ BackSide }
         metalness={ 0.7 }

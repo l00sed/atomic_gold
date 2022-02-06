@@ -1,10 +1,12 @@
+// React
 import React from "react"
 import ReactDOM from "react-dom"
-
+// Styles
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
-
+// Base canvas from Three fiber
 import { Canvas } from "@react-three/fiber"
+// Post Processing
 import {
   EffectComposer,
   BrightnessContrast,
@@ -13,13 +15,12 @@ import {
   Noise,
   Vignette
 } from '@react-three/postprocessing'
-
 // Components
 import Cubes from "./components/Cubes"
 import Lights from "./components/Lights"
 import Environment from "./components/Environment"
 import Fireflies from "./components/Fireflies"
-
+// Testing
 import reportWebVitals from './reportWebVitals'
 
 function App() {
@@ -51,10 +52,17 @@ function App() {
             darkness={ 1.2 }
           />
         </EffectComposer>
-        <Cubes />
+        <Cubes
+          numberNodes={ 500 }
+          cubeActive={ 0x000000 }
+          cubeDefault={ 0xf85c37 }
+          cubeHovered={ 0xff0000 }
+        />
         <Lights />
-        <Environment />
-        <Fireflies count={ 800 } />
+        <Environment
+          color={ 0xf85c37 }
+        />
+        <Fireflies count={ 500 } />
       </Canvas>
     </>
   )

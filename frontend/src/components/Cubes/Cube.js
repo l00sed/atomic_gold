@@ -8,7 +8,11 @@ import React, {
 import { random } from "lodash"
 import { useFrame } from "@react-three/fiber"
 
-export default () => {
+export default ( {
+  cubeActive=0x000000,
+  cubeDefault=0xff99cc,
+  cubeHovered=0xff0000
+} ) => {
   const mesh = useRef()
   const time = useRef( 0 )
 
@@ -27,7 +31,7 @@ export default () => {
   const timeMod = useMemo( () => random( 0.1, 25, true ), [] )
 
   // color
-  const color = isHovered ? 0xf87c35 : ( isActive ? 0xff0000 : 0xf95b3c )
+  const color = isHovered ? cubeHovered : ( isActive ? cubeActive : cubeDefault )
 
   //useEffect of the activeState
   useEffect( () => {
