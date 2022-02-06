@@ -70,7 +70,7 @@ export default () => {
     >
       <boxBufferGeometry
         attach="geometry"
-        args={ [ random( 0.001, 0.05 ), random( 0.9, 99 ), random( 0.01, 0.1 ) ] }
+        args={ [ random( 0.001, 0.05 ), random( 0.9, 4 ), random( 0.01, 0.1 ) ] }
       />
       <meshStandardMaterial
         attach="material"
