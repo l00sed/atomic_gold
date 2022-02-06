@@ -5,7 +5,7 @@ export default () => {
     return (
       <mesh>
         <sphereBufferGeometry
-          args={ [ 0.7, 30, 30 ] }
+          args={ [ 0.2, 30, 30 ] }
           attach="geometry"
         />
         <meshBasicMaterial
@@ -25,6 +25,7 @@ export default () => {
       <pointLight
         intensity={ 1.12 }
         position={ [0, 0, 0] }
+        decay={ 2 }
       />
     </group>
   )

@@ -9,10 +9,11 @@ export default () => {
         attach="geometry"
       />
       <meshStandardMaterial
-        color={ 0xf32b3d }
+        color={ 0xf85c37 }
         attach="material"
         side={ BackSide }
-        metalness={ 0.1 }
+        metalness={ 0.7 }
+        roughness={ 0.5 }
       />
     </mesh>
   )

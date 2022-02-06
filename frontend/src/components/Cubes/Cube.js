@@ -19,11 +19,12 @@ export default () => {
 
   // position
   const position = useMemo( () => {
-    return [ random( -3, 3, true ), random( -3, 3, true ), random( -3, 3, true ) ]
+    const density = 3 // closer to 0, most dense
+    return [ random( -density, density, true ), random( -density, density, true ), random( -density, density, true ) ]
   }, [] )
 
-  // random time mod factor
-  const timeMod = useMemo( () => random( 0.1, 4, true ), [] )
+  // random time mod factor used for spin speed on floating elements
+  const timeMod = useMemo( () => random( 0.1, 25, true ), [] )
 
   // color
   const color = isHovered ? 0xf87c35 : ( isActive ? 0xff0000 : 0xf95b3c )
@@ -69,12 +70,12 @@ export default () => {
     >
       <boxBufferGeometry
         attach="geometry"
-        args={ [ 0.047, 0.5, 0.29 ] }
+        args={ [ random( 0.001, 0.05 ), random( 0.9, 99 ), random( 0.01, 0.1 ) ] }
       />
       <meshStandardMaterial
         attach="material"
         color={ color }
-        roughness={ 0.6 }
+        roughness={ 0.05 }
         metalness={ 0.1 }
       />
     </mesh>
