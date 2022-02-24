@@ -1,19 +1,16 @@
 import React from "react"
-import { BackSide } from "three"
 
 export default ( { color=0xa0a0a0 } ) => {
   return (
-    <mesh>
-      <sphereBufferGeometry
-        args={ [ 5, 10, 10 ] }
+    <mesh position={ [ -300, -300, -300 ] }>
+      <planeBufferGeometry
+        args={ [ 1000, 1000 ] }
         attach="geometry"
       />
-      <meshStandardMaterial
+      <meshBasicMaterial
         color={ color }
         attach="material"
-        side={ BackSide }
-        metalness={ 0.7 }
-        roughness={ 0.5 }
+        opacity={ 1 }
       />
     </mesh>
   )

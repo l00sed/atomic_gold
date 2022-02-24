@@ -1,6 +1,6 @@
 import React from "react"
 
-export default () => {
+export default ( { ambient_intensity=1, point_intensity=1 } ) => {
   const FakeSphere = () => {
     return (
       <mesh>
@@ -20,12 +20,12 @@ export default () => {
     <group>
       <FakeSphere />
       <ambientLight
-        intensity={ 0.9 }
+        intensity={ ambient_intensity }
       />
       <pointLight
-        intensity={ 1.12 }
+        intensity={ point_intensity }
         position={ [0, 0, 0] }
-        decay={ 2 }
+        decay={ 0.5 }
       />
     </group>
   )

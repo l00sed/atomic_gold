@@ -8,7 +8,7 @@ export default class FireflyMaterial extends THREE.ShaderMaterial {
         uTime: { value: 0 },
         uColor: { value: new THREE.Color('white') },
         uPixelRatio: { value: Math.min(window.devicePixelRatio, 2) },
-        uSize: { value: 150 },
+        uSize: { value: 10 },
       },
       vertexShader: `
       uniform float uPixelRatio;

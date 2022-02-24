@@ -3,7 +3,7 @@ import { useRef, useMemo } from 'react'
 import { useFrame } from '@react-three/fiber'
 import './shaders/FireflyMaterial'
 
-export default function Fireflies( { count = 40 } ) {
+export default function Fireflies( { count=40 } ) {
   const shader = useRef()
   const [ positionArray, scaleArray ] = useMemo( () => {
     const positionArray = new Float32Array( count * 3 )
